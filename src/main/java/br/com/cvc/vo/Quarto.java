@@ -1,13 +1,16 @@
 package br.com.cvc.vo;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
-public class Quarto {
+public class Quarto implements Serializable{
 	
 	private Integer roomID;
 	private String categoryName;
 	private BigDecimal priceAdult;
 	private BigDecimal priceChild;
+	private BigDecimal totalPrice;
+	
 	public Integer getRoomID() {
 		return roomID;
 	}
@@ -31,5 +34,11 @@ public class Quarto {
 	}
 	public void setPriceChild(BigDecimal priceChild) {
 		this.priceChild = priceChild;
+	}
+	public BigDecimal getTotalPrice() {
+		return totalPrice;
+	}
+	public void setTotalPrice(BigDecimal totalPrice) {
+		this.totalPrice = totalPrice;
 	}
 }

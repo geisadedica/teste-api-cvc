@@ -1,8 +1,9 @@
 package br.com.cvc.vo;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Hotel {
+public class Hotel implements Serializable{
 
 	private Integer id;
 	private String nome;
