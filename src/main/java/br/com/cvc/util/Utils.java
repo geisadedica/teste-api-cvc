@@ -9,9 +9,14 @@ public class Utils {
 	
 	public static Long getDiffDates(String d1, String d2) throws Exception{
 		
-	    LocalDate dateTime1 = LocalDate.parse(d1, formatter);
-	    LocalDate dateTime2 = LocalDate.parse(d2, formatter);
-	    
-		return ChronoUnit.DAYS.between(dateTime1, dateTime2);
+		try{
+		    LocalDate dateTime1 = LocalDate.parse(d1, formatter);
+		    LocalDate dateTime2 = LocalDate.parse(d2, formatter);
+		    
+			return ChronoUnit.DAYS.between(dateTime1, dateTime2);
+		}catch (Exception e){
+			throw new Exception("Verifique formato data: MM-dd-yyyy");
+		}
+
 	}
 }

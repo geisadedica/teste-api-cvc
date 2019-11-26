@@ -2,8 +2,10 @@ package br.com.cvc.vo;
 
 import java.io.Serializable;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+@JsonIgnoreProperties
 public class ResultVO implements Serializable{
 	
 	@JsonProperty(value = "success")
